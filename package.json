@@ -1,0 +1,16 @@
+{
+  "name": "will-zavala-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portfolio of Will Zavala — Instructional Designer, Learning & Development Leader, and EdTech Strategist.",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "node --check server.js",
+    "lint": "node --check server.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
