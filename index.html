@@ -18,8 +18,39 @@
             display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
           },
           colors: {
+            epl: {
+              dark: '#233D4D',
+              'dark-deep': '#192C38',
+              light: '#EDE7E3',
+              'light-soft': '#F6F3F0',
+              border: '#D9D0C9',
+            },
+            persimmon: {
+              50: '#FBE8E6',
+              100: '#FFC9BA',
+              200: '#FFA68D',
+              300: '#FF8360',
+              400: '#FF663D',
+              500: '#FE491C',
+              600: '#F34318',
+              700: '#E53C13',
+              800: '#D7350E',
+              900: '#BE2805',
+            },
+            shamrock: {
+              50: '#E8F6E9',
+              100: '#C7E9C9',
+              200: '#A3DBA6',
+              300: '#7DCE82',
+              400: '#5FC367',
+              500: '#43B84D',
+              600: '#3AA844',
+              700: '#2E9638',
+              800: '#24852E',
+              900: '#0D651C',
+            },
             slate: {
-              950: '#090D16',
+              950: '#192C38',
             }
           }
         }
@@ -28,11 +59,11 @@
   </script>
   <style>
     body {
-      background-color: #F8FAFC;
-      color: #0F172A;
+      background-color: #EDE7E3;
+      color: #233D4D;
     }
     .glass-nav {
-      background: rgba(248, 250, 252, 0.88);
+      background: rgba(237, 231, 227, 0.9);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
     }
@@ -41,40 +72,40 @@
     }
     .card-hover:hover {
       transform: translateY(-4px);
-      box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
-      border-color: #CBD5E1;
+      box-shadow: 0 20px 25px -5px rgba(35, 61, 77, 0.1), 0 8px 10px -6px rgba(35, 61, 77, 0.05);
+      border-color: #C4B8AE;
     }
   </style>
 </head>
-<body class="antialiased selection:bg-amber-200 selection:text-slate-900">
+<body class="antialiased selection:bg-persimmon-200 selection:text-epl-dark">
 
   <!-- Sticky Navigation -->
-  <header class="sticky top-0 z-40 glass-nav border-b border-slate-200/80">
+  <header class="sticky top-0 z-40 glass-nav border-b border-epl-border/90">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="#" class="flex items-center gap-2.5 group">
-        <span class="w-8 h-8 rounded-lg bg-slate-900 text-white font-display font-bold text-sm flex items-center justify-center tracking-tight group-hover:bg-amber-600 transition-colors">WZ</span>
-        <span class="font-display font-bold text-slate-900 tracking-tight text-base">Will Zavala</span>
+        <span class="w-8 h-8 rounded-lg bg-epl-dark text-white font-display font-bold text-sm flex items-center justify-center tracking-tight group-hover:bg-persimmon-600 transition-colors">WZ</span>
+        <span class="font-display font-bold text-epl-dark tracking-tight text-base">Will Zavala</span>
       </a>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-        <a href="#work" class="hover:text-slate-900 transition-colors">Projects</a>
-        <a href="#capabilities" class="hover:text-slate-900 transition-colors">Capabilities</a>
-        <a href="#about" class="hover:text-slate-900 transition-colors">Background</a>
-        <a href="#contact" class="hover:text-slate-900 transition-colors">Contact</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-epl-dark/75">
+        <a href="#work" class="hover:text-epl-dark transition-colors">Projects</a>
+        <a href="#capabilities" class="hover:text-epl-dark transition-colors">Capabilities</a>
+        <a href="#about" class="hover:text-epl-dark transition-colors">Background</a>
+        <a href="#contact" class="hover:text-epl-dark transition-colors">Contact</a>
       </nav>
 
       <div class="flex items-center gap-2.5 sm:gap-3">
         <a href="https://www.linkedin.com/in/williamzavala/" target="_blank" rel="noopener noreferrer"
-           class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-sm font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-200/60 transition-colors">
+           class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-sm font-medium text-epl-dark/80 hover:text-epl-dark hover:bg-epl-dark/10 transition-colors">
           <span>LinkedIn</span>
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10"/></svg>
         </a>
         <a href="#contact"
-           class="inline-flex items-center px-3.5 sm:px-4 py-2 rounded-lg bg-slate-900 text-white text-xs sm:text-sm font-medium hover:bg-slate-800 transition-colors shadow-sm whitespace-nowrap">
+           class="inline-flex items-center px-3.5 sm:px-4 py-2 rounded-lg bg-epl-dark text-white text-xs sm:text-sm font-medium hover:bg-persimmon-700 transition-colors shadow-sm whitespace-nowrap">
           Get in Touch
         </a>
         <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu"
-                class="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-lg border border-slate-200 bg-white/80 text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-colors">
+                class="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-lg border border-epl-border bg-white/80 text-epl-dark hover:bg-white transition-colors">
           <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
           <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
@@ -82,72 +113,110 @@
     </div>
 
     <!-- Collapsible Mobile Navigation -->
-    <nav id="mobile-menu" aria-label="Mobile navigation" class="hidden md:hidden border-t border-slate-200/80 bg-white/95 backdrop-blur-md">
-      <div class="max-w-6xl mx-auto px-6 py-3 flex flex-col gap-1 text-sm font-medium text-slate-700">
-        <a href="#work" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">Projects</a>
-        <a href="#capabilities" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">Capabilities</a>
-        <a href="#about" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">Background</a>
-        <a href="#contact" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors">Contact</a>
+    <nav id="mobile-menu" aria-label="Mobile navigation" class="hidden md:hidden border-t border-epl-border/90 bg-epl-light-soft/95 backdrop-blur-md">
+      <div class="max-w-6xl mx-auto px-6 py-3 flex flex-col gap-1 text-sm font-medium text-epl-dark">
+        <a href="#work" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-epl-light transition-colors">Projects</a>
+        <a href="#capabilities" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-epl-light transition-colors">Capabilities</a>
+        <a href="#about" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-epl-light transition-colors">Background</a>
+        <a href="#contact" class="mobile-nav-link py-2.5 px-3 rounded-lg hover:bg-epl-light transition-colors">Contact</a>
         <a href="https://www.linkedin.com/in/williamzavala/" target="_blank" rel="noopener noreferrer"
-           class="mobile-nav-link sm:hidden py-2.5 px-3 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors inline-flex items-center justify-between">
+           class="mobile-nav-link sm:hidden py-2.5 px-3 rounded-lg hover:bg-epl-light transition-colors inline-flex items-center justify-between">
           <span>LinkedIn</span>
-          <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10"/></svg>
+          <svg class="w-3.5 h-3.5 text-epl-dark/60" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10"/></svg>
         </a>
       </div>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section class="relative overflow-hidden pt-16 pb-20 md:pt-24 md:pb-28 border-b border-slate-200/80 bg-gradient-to-b from-white to-slate-50">
+  <section class="relative overflow-hidden py-10 md:py-14 border-b border-epl-border bg-gradient-to-b from-white to-epl-light">
     <div class="max-w-6xl mx-auto px-6">
       <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 sm:py-1 rounded-xl sm:rounded-full bg-slate-100 border border-slate-200 text-[11px] sm:text-xs font-semibold text-slate-700 tracking-wide uppercase leading-snug mb-6">
-          Instructional Design &bull; Learning Technology &bull; Change Management
-        </div>
-
-        <h1 class="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl text-slate-900 tracking-tight leading-[1.1] mb-6">
+        <h1 class="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl text-epl-dark tracking-tight leading-[1.1] mb-6">
           Designing learning ecosystems people actually adopt.
         </h1>
 
-        <p class="text-lg sm:text-xl text-slate-600 leading-relaxed mb-8 max-w-2xl">
-          I’m <strong class="font-semibold text-slate-900">Will Zavala</strong>—an Instructional Designer, L&amp;D Leader, and Proven Project Manager based in Orlando, FL. With 15+ years across K–12 and higher education, I translate complex technical workflows into intuitive training, scalable LMS experiences, and measurable organizational adoption.
+        <p class="text-lg sm:text-xl text-epl-dark/80 leading-relaxed mb-8 max-w-2xl">
+          I’m <strong class="font-semibold text-epl-dark">Will Zavala</strong>—an Instructional Designer, L&amp;D Leader, and Proven Project Manager based in Orlando, FL. With 15+ years across K–12 and higher education, I translate complex technical workflows into intuitive training, scalable LMS experiences, and measurable organizational adoption.
         </p>
 
         <div class="flex flex-wrap items-center gap-4">
           <a href="#work"
-             class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 text-white font-semibold text-sm hover:bg-slate-800 transition-all shadow-sm">
+             class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-epl-dark text-white font-semibold text-sm hover:bg-persimmon-700 transition-all shadow-sm">
             Explore Projects
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
           </a>
           <a href="https://www.linkedin.com/in/williamzavala/" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white text-slate-900 border border-slate-300 font-semibold text-sm hover:bg-slate-50 hover:border-slate-400 transition-all">
+             class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white text-epl-dark border border-epl-border font-semibold text-sm hover:bg-epl-light-soft hover:border-epl-dark/40 transition-all">
             Connect on LinkedIn
-            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10"/></svg>
+            <svg class="w-4 h-4 text-epl-dark/60" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10"/></svg>
           </a>
         </div>
       </div>
 
-      <!-- Credibility Strip -->
-      <div class="mt-14 pt-8 border-t border-slate-200/80 grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div>
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Current Focus</div>
-          <div class="text-sm font-semibold text-slate-900">Enterprise IT Change Management</div>
-          <div class="text-xs text-slate-500">University of Central Florida</div>
+      <!-- Interactive Credibility Strip -->
+      <div id="credibility-interactive" class="mt-12 pt-8 border-t border-epl-border">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+          <button type="button" data-cred="focus" aria-expanded="false" aria-controls="credibility-drawer"
+                  class="cred-tab group text-left rounded-xl p-3.5 sm:p-4 border border-transparent hover:border-epl-border hover:bg-white/80 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-persimmon-500">
+            <div class="flex items-center justify-between gap-2 mb-1">
+              <span class="text-xs font-semibold uppercase tracking-wider text-persimmon-700">Current Focus</span>
+              <svg class="cred-chevron w-3.5 h-3.5 text-epl-dark/40 group-hover:text-persimmon-600 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+            <div class="text-sm font-semibold text-epl-dark">Enterprise IT Change Management</div>
+            <div class="text-xs text-epl-dark/65">University of Central Florida</div>
+          </button>
+
+          <button type="button" data-cred="experience" aria-expanded="false" aria-controls="credibility-drawer"
+                  class="cred-tab group text-left rounded-xl p-3.5 sm:p-4 border border-transparent hover:border-epl-border hover:bg-white/80 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-persimmon-500">
+            <div class="flex items-center justify-between gap-2 mb-1">
+              <span class="text-xs font-semibold uppercase tracking-wider text-persimmon-700">Experience</span>
+              <svg class="cred-chevron w-3.5 h-3.5 text-epl-dark/40 group-hover:text-persimmon-600 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+            <div class="text-sm font-semibold text-epl-dark">15+ Years in Education</div>
+            <div class="text-xs text-epl-dark/65">Instructional Design &amp; IT Leadership</div>
+          </button>
+
+          <button type="button" data-cred="methodology" aria-expanded="false" aria-controls="credibility-drawer"
+                  class="cred-tab group text-left rounded-xl p-3.5 sm:p-4 border border-transparent hover:border-epl-border hover:bg-white/80 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-persimmon-500">
+            <div class="flex items-center justify-between gap-2 mb-1">
+              <span class="text-xs font-semibold uppercase tracking-wider text-persimmon-700">Methodology</span>
+              <svg class="cred-chevron w-3.5 h-3.5 text-epl-dark/40 group-hover:text-persimmon-600 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+            <div class="text-sm font-semibold text-epl-dark">Prosci ADKAR &amp; ADDIE</div>
+            <div class="text-xs text-epl-dark/65">Human-Centered Rollouts</div>
+          </button>
+
+          <button type="button" data-cred="location" aria-expanded="false" aria-controls="credibility-drawer"
+                  class="cred-tab group text-left rounded-xl p-3.5 sm:p-4 border border-transparent hover:border-epl-border hover:bg-white/80 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-persimmon-500">
+            <div class="flex items-center justify-between gap-2 mb-1">
+              <span class="text-xs font-semibold uppercase tracking-wider text-persimmon-700">Location</span>
+              <svg class="cred-chevron w-3.5 h-3.5 text-epl-dark/40 group-hover:text-persimmon-600 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+            <div class="text-sm font-semibold text-epl-dark">Orlando, FL</div>
+            <div class="text-xs text-epl-dark/65">Open to Local &amp; Remote Roles</div>
+          </button>
         </div>
-        <div>
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Experience</div>
-          <div class="text-sm font-semibold text-slate-900">15+ Years in Education</div>
-          <div class="text-xs text-slate-500">Instructional Design &amp; IT Leadership</div>
-        </div>
-        <div>
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Methodology</div>
-          <div class="text-sm font-semibold text-slate-900">Prosci ADKAR &amp; ADDIE</div>
-          <div class="text-xs text-slate-500">Human-Centered Rollouts</div>
-        </div>
-        <div>
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Location</div>
-          <div class="text-sm font-semibold text-slate-900">Orlando, FL</div>
-          <div class="text-xs text-slate-500">Open to Local &amp; Remote Roles</div>
+
+        <!-- Slide-Down Interactive Detail Drawer -->
+        <div id="credibility-drawer" aria-hidden="true" class="grid grid-rows-[0fr] opacity-0 mt-0 transition-[grid-template-rows,opacity,margin] duration-300 ease-out">
+          <div class="overflow-hidden">
+            <div id="credibility-drawer-card" class="bg-white border-y border-r border-epl-border border-l-4 border-l-persimmon-500 rounded-2xl p-5 sm:p-6 shadow-md">
+              <div class="flex items-start justify-between gap-4 mb-3">
+                <div>
+                  <div id="cred-drawer-eyebrow" class="text-[11px] font-bold uppercase tracking-widest text-persimmon-700 mb-1"></div>
+                  <h2 id="cred-drawer-title" class="font-display font-bold text-lg sm:text-xl text-epl-dark"></h2>
+                  <p id="cred-drawer-subtitle" class="text-xs font-medium text-epl-dark/65 mt-0.5"></p>
+                </div>
+                <button id="cred-drawer-close" type="button" aria-label="Close details drawer"
+                        class="w-8 h-8 rounded-lg bg-epl-light-soft hover:bg-epl-light text-epl-dark/70 hover:text-epl-dark flex items-center justify-center transition-colors shrink-0">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+              </div>
+              <p id="cred-drawer-summary" class="text-sm text-epl-dark/80 leading-relaxed mb-4"></p>
+              <ul id="cred-drawer-items" class="grid sm:grid-cols-2 gap-3 text-sm text-epl-dark/85"></ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -158,15 +227,15 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-600 block mb-2">Selected Work</span>
-          <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 tracking-tight">Featured Projects</h2>
+          <span class="text-xs font-bold uppercase tracking-widest text-persimmon-700 block mb-2">Selected Work</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-epl-dark tracking-tight">Featured Projects</h2>
         </div>
 
         <!-- Filter Pills -->
         <div class="flex flex-wrap gap-2" id="filter-bar">
-          <button data-filter="all" class="filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 text-white transition-colors">All Projects</button>
-          <button data-filter="live-demo" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:border-slate-300 transition-colors">Live Demo</button>
-          <button data-filter="project-management" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-600 border border-slate-200 hover:border-slate-300 transition-colors">Project Management</button>
+          <button data-filter="all" class="filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-epl-dark text-white transition-colors">All Projects</button>
+          <button data-filter="live-demo" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white text-epl-dark/80 border border-epl-border hover:border-epl-dark/40 transition-colors">Live Demo</button>
+          <button data-filter="project-management" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white text-epl-dark/80 border border-epl-border hover:border-epl-dark/40 transition-colors">Project Management</button>
         </div>
       </div>
 
@@ -174,31 +243,31 @@
       <div class="grid md:grid-cols-2 gap-8" id="projects-grid">
 
         <!-- Card 1: FHSAA Compliance Training -->
-        <article data-category="live-demo" class="project-card card-hover bg-white rounded-2xl border border-slate-200/90 overflow-hidden flex flex-col">
-          <div class="min-h-[11rem] sm:min-h-[11.5rem] bg-gradient-to-br from-slate-900 via-slate-800 to-amber-900 p-5 sm:p-6 flex flex-col justify-between gap-4 relative overflow-hidden">
+        <article data-category="live-demo" class="project-card card-hover bg-white rounded-2xl border border-epl-border/90 overflow-hidden flex flex-col">
+          <div class="min-h-[11rem] sm:min-h-[11.5rem] bg-gradient-to-br from-epl-dark-deep via-epl-dark to-persimmon-900 p-5 sm:p-6 flex flex-col justify-between gap-4 relative overflow-hidden">
             <div class="flex items-start sm:items-center justify-between gap-3 z-10">
-              <span class="px-2.5 py-1 rounded-md bg-white/10 backdrop-blur-sm text-amber-300 text-[11px] sm:text-xs leading-snug font-semibold tracking-wide">Continuing Education &bull; Articulate Rise</span>
-              <span class="text-xs font-medium text-slate-300 whitespace-nowrap shrink-0 pt-0.5 sm:pt-0">2025</span>
+              <span class="px-2.5 py-1 rounded-md bg-white/10 backdrop-blur-sm text-persimmon-200 text-[11px] sm:text-xs leading-snug font-semibold tracking-wide">Continuing Education &bull; Articulate Rise</span>
+              <span class="text-xs font-medium text-epl-light/85 whitespace-nowrap shrink-0 pt-0.5 sm:pt-0">2025</span>
             </div>
             <div class="z-10">
-              <div class="text-white/70 text-[11px] sm:text-xs font-medium uppercase tracking-wider leading-snug mb-1">The First Academy</div>
+              <div class="text-epl-light/75 text-[11px] sm:text-xs font-medium uppercase tracking-wider leading-snug mb-1">The First Academy</div>
               <div class="text-white font-display font-bold text-lg sm:text-xl leading-snug">FHSAA Compliance Training</div>
             </div>
           </div>
 
           <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
             <div>
-              <p class="text-slate-600 text-sm leading-relaxed mb-5">
+              <p class="text-epl-dark/80 text-sm leading-relaxed mb-5">
                 Designed and built an interactive FHSAA compliance training course in Articulate Rise for athletic directors and coaches—incorporating scenario-based policy reviews, mastery quizzes, and seamless LMS integration for automated completion tracking.
               </p>
               <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Compliance Training</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Stakeholder Discovery</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">SCORM 2004 4th Ed.</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">Compliance Training</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">Stakeholder Discovery</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">SCORM 2004 4th Ed.</span>
               </div>
             </div>
 
-            <button onclick="openModal('ucf')" class="w-full py-2.5 px-4 rounded-xl bg-slate-50 hover:bg-slate-900 text-slate-900 hover:text-white border border-slate-200 hover:border-slate-900 font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+            <button onclick="openModal('ucf')" class="w-full py-2.5 px-4 rounded-xl bg-epl-light-soft hover:bg-epl-dark text-epl-dark hover:text-white border border-epl-border hover:border-epl-dark font-semibold text-sm transition-colors flex items-center justify-center gap-2">
               Project Details
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </button>
@@ -206,31 +275,31 @@
         </article>
 
         <!-- Card 2: SCORM Simulator -->
-        <article data-category="live-demo" class="project-card card-hover bg-white rounded-2xl border border-slate-200/90 overflow-hidden flex flex-col">
-          <div class="min-h-[11rem] sm:min-h-[11.5rem] bg-gradient-to-br from-sky-950 via-slate-900 to-sky-800 p-5 sm:p-6 flex flex-col justify-between gap-4 relative overflow-hidden">
+        <article data-category="live-demo" class="project-card card-hover bg-white rounded-2xl border border-epl-border/90 overflow-hidden flex flex-col">
+          <div class="min-h-[11rem] sm:min-h-[11.5rem] bg-gradient-to-br from-epl-dark-deep via-epl-dark to-shamrock-900 p-5 sm:p-6 flex flex-col justify-between gap-4 relative overflow-hidden">
             <div class="flex items-start sm:items-center justify-between gap-3 z-10">
-              <span class="px-2.5 py-1 rounded-md bg-white/10 backdrop-blur-sm text-sky-300 text-[11px] sm:text-xs leading-snug font-semibold tracking-wide">Interactive eLearning &bull; SCORM 2004</span>
-              <span class="text-xs font-medium text-slate-300 whitespace-nowrap shrink-0 pt-0.5 sm:pt-0">2026</span>
+              <span class="px-2.5 py-1 rounded-md bg-white/10 backdrop-blur-sm text-shamrock-200 text-[11px] sm:text-xs leading-snug font-semibold tracking-wide">Interactive eLearning &bull; SCORM 2004</span>
+              <span class="text-xs font-medium text-epl-light/85 whitespace-nowrap shrink-0 pt-0.5 sm:pt-0">2026</span>
             </div>
             <div class="z-10">
-              <div class="text-white/70 text-[11px] sm:text-xs font-medium uppercase tracking-wider leading-snug mb-1">Scenario-Based Simulation</div>
+              <div class="text-epl-light/75 text-[11px] sm:text-xs font-medium uppercase tracking-wider leading-snug mb-1">Scenario-Based Simulation</div>
               <div class="text-white font-display font-bold text-lg sm:text-xl leading-snug">IT Service Desk Training Simulator</div>
             </div>
           </div>
 
           <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
             <div>
-              <p class="text-slate-600 text-sm leading-relaxed mb-5">
+              <p class="text-epl-dark/80 text-sm leading-relaxed mb-5">
                 Architected and coded an interactive HTML5/JavaScript IT Service Desk simulation packaged as a SCORM 2004 4th Edition module—featuring realistic ticket triage scenarios, branching decision paths, and automated LMS completion and score reporting.
               </p>
               <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">SCORM 2004 4th Ed.</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">HTML5 / JS</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Branching Scenarios</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">SCORM 2004 4th Ed.</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">HTML5 / JS</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">Branching Scenarios</span>
               </div>
             </div>
 
-            <button onclick="openModal('scorm')" class="w-full py-2.5 px-4 rounded-xl bg-slate-50 hover:bg-slate-900 text-slate-900 hover:text-white border border-slate-200 hover:border-slate-900 font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+            <button onclick="openModal('scorm')" class="w-full py-2.5 px-4 rounded-xl bg-epl-light-soft hover:bg-epl-dark text-epl-dark hover:text-white border border-epl-border hover:border-epl-dark font-semibold text-sm transition-colors flex items-center justify-center gap-2">
               Project Details
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </button>
@@ -238,31 +307,31 @@
         </article>
 
         <!-- Card 3: CILS Hybrid Curriculum -->
-        <article data-category="project-management" class="project-card card-hover bg-white rounded-2xl border border-slate-200/90 overflow-hidden flex flex-col">
-          <div class="min-h-[11rem] sm:min-h-[11.5rem] bg-gradient-to-br from-emerald-950 via-slate-900 to-teal-900 p-5 sm:p-6 flex flex-col justify-between gap-4 relative overflow-hidden">
+        <article data-category="project-management" class="project-card card-hover bg-white rounded-2xl border border-epl-border/90 overflow-hidden flex flex-col">
+          <div class="min-h-[11rem] sm:min-h-[11.5rem] bg-gradient-to-br from-shamrock-900 via-epl-dark to-epl-dark-deep p-5 sm:p-6 flex flex-col justify-between gap-4 relative overflow-hidden">
             <div class="flex items-start sm:items-center justify-between gap-3 z-10">
-              <span class="px-2.5 py-1 rounded-md bg-white/10 backdrop-blur-sm text-emerald-300 text-[11px] sm:text-xs leading-snug font-semibold tracking-wide">Curriculum Architecture &bull; Adult Learning</span>
-              <span class="text-xs font-medium text-slate-300 whitespace-nowrap shrink-0 pt-0.5 sm:pt-0">2025</span>
+              <span class="px-2.5 py-1 rounded-md bg-white/10 backdrop-blur-sm text-shamrock-200 text-[11px] sm:text-xs leading-snug font-semibold tracking-wide">Curriculum Architecture &bull; Adult Learning</span>
+              <span class="text-xs font-medium text-epl-light/85 whitespace-nowrap shrink-0 pt-0.5 sm:pt-0">2025</span>
             </div>
             <div class="z-10">
-              <div class="text-white/70 text-[11px] sm:text-xs font-medium uppercase tracking-wider leading-snug mb-1">Calvary International Language School</div>
+              <div class="text-epl-light/75 text-[11px] sm:text-xs font-medium uppercase tracking-wider leading-snug mb-1">Calvary International Language School</div>
               <div class="text-white font-display font-bold text-lg sm:text-xl leading-snug">Multiple Hybrid ESL Curriculum Conversion Project</div>
             </div>
           </div>
 
           <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
             <div>
-              <p class="text-slate-600 text-sm leading-relaxed mb-5">
+              <p class="text-epl-dark/80 text-sm leading-relaxed mb-5">
                 Redesigned a traditional classroom-bound adult English program (<em>Ventures</em>) into multiple hybrid courses’ curriculum—balancing synchronous communicative practice with self-paced digital reinforcement for adult ESL learners.
               </p>
               <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Blended Learning</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Andragogy</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Curriculum Mapping</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">Blended Learning</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">Andragogy</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">Curriculum Mapping</span>
               </div>
             </div>
 
-            <button onclick="openModal('cils')" class="w-full py-2.5 px-4 rounded-xl bg-slate-50 hover:bg-slate-900 text-slate-900 hover:text-white border border-slate-200 hover:border-slate-900 font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+            <button onclick="openModal('cils')" class="w-full py-2.5 px-4 rounded-xl bg-epl-light-soft hover:bg-epl-dark text-epl-dark hover:text-white border border-epl-border hover:border-epl-dark font-semibold text-sm transition-colors flex items-center justify-center gap-2">
               Project Details
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </button>
@@ -270,31 +339,31 @@
         </article>
 
         <!-- Card 4: The First Academy -->
-        <article data-category="project-management" class="project-card card-hover bg-white rounded-2xl border border-slate-200/90 overflow-hidden flex flex-col">
-          <div class="min-h-[11rem] sm:min-h-[11.5rem] bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-800 p-5 sm:p-6 flex flex-col justify-between gap-4 relative overflow-hidden">
+        <article data-category="project-management" class="project-card card-hover bg-white rounded-2xl border border-epl-border/90 overflow-hidden flex flex-col">
+          <div class="min-h-[11rem] sm:min-h-[11.5rem] bg-gradient-to-br from-epl-dark via-epl-dark-deep to-persimmon-900 p-5 sm:p-6 flex flex-col justify-between gap-4 relative overflow-hidden">
             <div class="flex items-start sm:items-center justify-between gap-3 z-10">
-              <span class="px-2.5 py-1 rounded-md bg-white/10 backdrop-blur-sm text-indigo-300 text-[11px] sm:text-xs leading-snug font-semibold tracking-wide">Enterprise EdTech &bull; Prosci ADKAR</span>
-              <span class="text-xs font-medium text-slate-300 whitespace-nowrap shrink-0 pt-0.5 sm:pt-0">2022 &ndash; 2026</span>
+              <span class="px-2.5 py-1 rounded-md bg-white/10 backdrop-blur-sm text-persimmon-200 text-[11px] sm:text-xs leading-snug font-semibold tracking-wide">Enterprise EdTech &bull; Prosci ADKAR</span>
+              <span class="text-xs font-medium text-epl-light/85 whitespace-nowrap shrink-0 pt-0.5 sm:pt-0">2022 &ndash; 2026</span>
             </div>
             <div class="z-10">
-              <div class="text-white/70 text-[11px] sm:text-xs font-medium uppercase tracking-wider leading-snug mb-1">The First Academy</div>
+              <div class="text-epl-light/75 text-[11px] sm:text-xs font-medium uppercase tracking-wider leading-snug mb-1">The First Academy</div>
               <div class="text-white font-display font-bold text-lg sm:text-xl leading-snug">Campus-Wide EdTech &amp; Change Leadership</div>
             </div>
           </div>
 
           <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
             <div>
-              <p class="text-slate-600 text-sm leading-relaxed mb-5">
+              <p class="text-epl-dark/80 text-sm leading-relaxed mb-5">
                 Directed enterprise technology strategy, a $600K budget, and campus-wide change management for 1,400 students and 125 faculty and staff—scaling the IT team from 1 to 3 while leading 2,000+ device fleets, cloud migrations, and role-based L&amp;D.
               </p>
               <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Prosci ADKAR</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">L&amp;D Program Design</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">IT Operations</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">Prosci ADKAR</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">L&amp;D Program Design</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">IT Operations</span>
               </div>
             </div>
 
-            <button onclick="openModal('tfa')" class="w-full py-2.5 px-4 rounded-xl bg-slate-50 hover:bg-slate-900 text-slate-900 hover:text-white border border-slate-200 hover:border-slate-900 font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+            <button onclick="openModal('tfa')" class="w-full py-2.5 px-4 rounded-xl bg-epl-light-soft hover:bg-epl-dark text-epl-dark hover:text-white border border-epl-border hover:border-epl-dark font-semibold text-sm transition-colors flex items-center justify-center gap-2">
               Project Details
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </button>
@@ -302,31 +371,31 @@
         </article>
 
         <!-- Card 5: Lectio Divina Microlearning -->
-        <article data-category="live-demo" class="project-card card-hover bg-white rounded-2xl border border-slate-200/90 overflow-hidden flex flex-col">
-          <div class="min-h-[11rem] sm:min-h-[11.5rem] bg-gradient-to-br from-violet-950 via-slate-900 to-purple-900 p-5 sm:p-6 flex flex-col justify-between gap-4 relative overflow-hidden">
+        <article data-category="live-demo" class="project-card card-hover bg-white rounded-2xl border border-epl-border/90 overflow-hidden flex flex-col">
+          <div class="min-h-[11rem] sm:min-h-[11.5rem] bg-gradient-to-br from-persimmon-900 via-epl-dark to-epl-dark-deep p-5 sm:p-6 flex flex-col justify-between gap-4 relative overflow-hidden">
             <div class="flex items-start sm:items-center justify-between gap-3 z-10">
-              <span class="px-2.5 py-1 rounded-md bg-white/10 backdrop-blur-sm text-violet-300 text-[11px] sm:text-xs leading-snug font-semibold tracking-wide">Microlearning &bull; Articulate Rise</span>
-              <span class="text-xs font-medium text-slate-300 whitespace-nowrap shrink-0 pt-0.5 sm:pt-0">2025</span>
+              <span class="px-2.5 py-1 rounded-md bg-white/10 backdrop-blur-sm text-persimmon-100 text-[11px] sm:text-xs leading-snug font-semibold tracking-wide">Microlearning &bull; Articulate Rise</span>
+              <span class="text-xs font-medium text-epl-light/85 whitespace-nowrap shrink-0 pt-0.5 sm:pt-0">2025</span>
             </div>
             <div class="z-10">
-              <div class="text-white/70 text-[11px] sm:text-xs font-medium uppercase tracking-wider leading-snug mb-1">Mobile-First Microlearning</div>
+              <div class="text-epl-light/75 text-[11px] sm:text-xs font-medium uppercase tracking-wider leading-snug mb-1">Mobile-First Microlearning</div>
               <div class="text-white font-display font-bold text-lg sm:text-xl leading-snug">Lectio Divina (Praying Personally)</div>
             </div>
           </div>
 
           <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
             <div>
-              <p class="text-slate-600 text-sm leading-relaxed mb-5">
+              <p class="text-epl-dark/80 text-sm leading-relaxed mb-5">
                 Designed and built a mobile-device-oriented microlearning lesson in Articulate Rise guiding learners through the practice of Lectio Divina—structured in focused, touch-friendly blocks optimized for smartphones and on-the-go reflection.
               </p>
               <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Microlearning</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Mobile-First Design</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Articulate Rise</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">Microlearning</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">Mobile-First Design</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">Articulate Rise</span>
               </div>
             </div>
 
-            <button onclick="openModal('lectio')" class="w-full py-2.5 px-4 rounded-xl bg-slate-50 hover:bg-slate-900 text-slate-900 hover:text-white border border-slate-200 hover:border-slate-900 font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+            <button onclick="openModal('lectio')" class="w-full py-2.5 px-4 rounded-xl bg-epl-light-soft hover:bg-epl-dark text-epl-dark hover:text-white border border-epl-border hover:border-epl-dark font-semibold text-sm transition-colors flex items-center justify-center gap-2">
               Project Details
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </button>
@@ -334,31 +403,31 @@
         </article>
 
         <!-- Card 6: Florida Department of Corrections & University Launch -->
-        <article data-category="project-management" class="project-card card-hover bg-white rounded-2xl border border-slate-200/90 overflow-hidden flex flex-col">
-          <div class="min-h-[11rem] sm:min-h-[11.5rem] bg-gradient-to-br from-cyan-950 via-slate-900 to-teal-900 p-5 sm:p-6 flex flex-col justify-between gap-4 relative overflow-hidden">
+        <article data-category="project-management" class="project-card card-hover bg-white rounded-2xl border border-epl-border/90 overflow-hidden flex flex-col">
+          <div class="min-h-[11rem] sm:min-h-[11.5rem] bg-gradient-to-br from-epl-dark via-shamrock-900 to-epl-dark-deep p-5 sm:p-6 flex flex-col justify-between gap-4 relative overflow-hidden">
             <div class="flex items-start sm:items-center justify-between gap-3 z-10">
-              <span class="px-2.5 py-1 rounded-md bg-white/10 backdrop-blur-sm text-cyan-300 text-[11px] sm:text-xs leading-snug font-semibold tracking-wide">Curriculum Architecture &bull; Government Contract</span>
-              <span class="text-xs font-medium text-slate-300 whitespace-nowrap shrink-0 pt-0.5 sm:pt-0">2022 &ndash; 2025</span>
+              <span class="px-2.5 py-1 rounded-md bg-white/10 backdrop-blur-sm text-shamrock-200 text-[11px] sm:text-xs leading-snug font-semibold tracking-wide">Curriculum Architecture &bull; Government Contract</span>
+              <span class="text-xs font-medium text-epl-light/85 whitespace-nowrap shrink-0 pt-0.5 sm:pt-0">2022 &ndash; 2025</span>
             </div>
             <div class="z-10">
-              <div class="text-white/70 text-[11px] sm:text-xs font-medium uppercase tracking-wider leading-snug mb-1">Florida Dept. of Corrections</div>
+              <div class="text-epl-light/75 text-[11px] sm:text-xs font-medium uppercase tracking-wider leading-snug mb-1">Florida Dept. of Corrections</div>
               <div class="text-white font-display font-bold text-lg sm:text-xl leading-snug">Enterprise LMS &amp; Articulate Rise Course Suite</div>
             </div>
           </div>
 
           <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
             <div>
-              <p class="text-slate-600 text-sm leading-relaxed mb-5">
+              <p class="text-epl-dark/80 text-sm leading-relaxed mb-5">
                 Authored over seven full-length Articulate Rise courses and researched, acquired, and implemented an LMS for the Florida Department of Corrections—while overseeing LMS, SIS, website, and data operations for a newly formed university and negotiating training programs with two additional organizations.
               </p>
               <div class="flex flex-wrap gap-2 mb-6">
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Articulate Rise (7+ Courses)</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">LMS &amp; SIS Ops</span>
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">Microlearning Roadmap</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">Articulate Rise (7+ Courses)</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">LMS &amp; SIS Ops</span>
+                <span class="px-2.5 py-1 rounded-md bg-epl-light text-epl-dark text-xs font-medium">Microlearning Roadmap</span>
               </div>
             </div>
 
-            <button onclick="openModal('fdc')" class="w-full py-2.5 px-4 rounded-xl bg-slate-50 hover:bg-slate-900 text-slate-900 hover:text-white border border-slate-200 hover:border-slate-900 font-semibold text-sm transition-colors flex items-center justify-center gap-2">
+            <button onclick="openModal('fdc')" class="w-full py-2.5 px-4 rounded-xl bg-epl-light-soft hover:bg-epl-dark text-epl-dark hover:text-white border border-epl-border hover:border-epl-dark font-semibold text-sm transition-colors flex items-center justify-center gap-2">
               Project Details
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </button>
@@ -370,56 +439,56 @@
   </section>
 
   <!-- Core Capabilities -->
-  <section id="capabilities" class="py-20 bg-white border-y border-slate-200/80">
+  <section id="capabilities" class="py-20 bg-white border-y border-epl-border">
     <div class="max-w-6xl mx-auto px-6">
       <div class="max-w-2xl mb-14">
-        <span class="text-xs font-bold uppercase tracking-widest text-amber-600 block mb-2">Core Capabilities</span>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 tracking-tight mb-4">Where pedagogy meets systems engineering.</h2>
-        <p class="text-slate-600 text-base leading-relaxed">
+        <span class="text-xs font-bold uppercase tracking-widest text-persimmon-700 block mb-2">Core Capabilities</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-epl-dark tracking-tight mb-4">Where pedagogy meets systems engineering.</h2>
+        <p class="text-epl-dark/80 text-base leading-relaxed">
           Great learning design fails without technical reliability and thoughtful change management. My work spans the full lifecycle from curriculum architecture to enterprise rollout.
         </p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Pillar 1 -->
-        <div class="p-7 rounded-2xl bg-slate-50 border border-slate-200/80">
-          <div class="w-11 h-11 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center mb-5">
+        <div class="p-7 rounded-2xl bg-epl-light-soft border border-epl-border">
+          <div class="w-11 h-11 rounded-xl bg-persimmon-100 text-persimmon-800 flex items-center justify-center mb-5">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
           </div>
-          <h3 class="font-display font-bold text-lg text-slate-900 mb-3">Instructional Design &amp; L&amp;D</h3>
-          <ul class="space-y-2.5 text-sm text-slate-600">
-            <li class="flex items-start gap-2"><span class="text-amber-600 font-bold">&bull;</span> ADDIE, SAM &amp; Learner-Centered Design</li>
-            <li class="flex items-start gap-2"><span class="text-amber-600 font-bold">&bull;</span> Scenario-Based &amp; Branching Simulations</li>
-            <li class="flex items-start gap-2"><span class="text-amber-600 font-bold">&bull;</span> Hybrid &amp; Asynchronous Course Architecture</li>
-            <li class="flex items-start gap-2"><span class="text-amber-600 font-bold">&bull;</span> Adult Learning Theory (Andragogy) &amp; Assessment</li>
+          <h3 class="font-display font-bold text-lg text-epl-dark mb-3">Instructional Design &amp; L&amp;D</h3>
+          <ul class="space-y-2.5 text-sm text-epl-dark/80">
+            <li class="flex items-start gap-2"><span class="text-persimmon-700 font-bold">&bull;</span> ADDIE, SAM &amp; Learner-Centered Design</li>
+            <li class="flex items-start gap-2"><span class="text-persimmon-700 font-bold">&bull;</span> Scenario-Based &amp; Branching Simulations</li>
+            <li class="flex items-start gap-2"><span class="text-persimmon-700 font-bold">&bull;</span> Hybrid &amp; Asynchronous Course Architecture</li>
+            <li class="flex items-start gap-2"><span class="text-persimmon-700 font-bold">&bull;</span> Adult Learning Theory (Andragogy) &amp; Assessment</li>
           </ul>
         </div>
 
         <!-- Pillar 2 -->
-        <div class="p-7 rounded-2xl bg-slate-50 border border-slate-200/80">
-          <div class="w-11 h-11 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-5">
+        <div class="p-7 rounded-2xl bg-epl-light-soft border border-epl-border">
+          <div class="w-11 h-11 rounded-xl bg-epl-dark text-white flex items-center justify-center mb-5">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
           </div>
-          <h3 class="font-display font-bold text-lg text-slate-900 mb-3">Learning Tech &amp; Authoring</h3>
-          <ul class="space-y-2.5 text-sm text-slate-600">
-            <li class="flex items-start gap-2"><span class="text-sky-600 font-bold">&bull;</span> Canvas Administration &amp; UX</li>
-            <li class="flex items-start gap-2"><span class="text-sky-600 font-bold">&bull;</span> Authoring in Articulate and Adobe Ecosystems</li>
-            <li class="flex items-start gap-2"><span class="text-sky-600 font-bold">&bull;</span> Custom HTML5, CSS &amp; JavaScript Modules</li>
-            <li class="flex items-start gap-2"><span class="text-sky-600 font-bold">&bull;</span> WCAG Accessibility &amp; Digital Tool Evaluation</li>
+          <h3 class="font-display font-bold text-lg text-epl-dark mb-3">Learning Tech &amp; Authoring</h3>
+          <ul class="space-y-2.5 text-sm text-epl-dark/80">
+            <li class="flex items-start gap-2"><span class="text-epl-dark font-bold">&bull;</span> Canvas Administration &amp; UX</li>
+            <li class="flex items-start gap-2"><span class="text-epl-dark font-bold">&bull;</span> Authoring in Articulate and Adobe Ecosystems</li>
+            <li class="flex items-start gap-2"><span class="text-epl-dark font-bold">&bull;</span> Custom HTML5, CSS &amp; JavaScript Modules</li>
+            <li class="flex items-start gap-2"><span class="text-epl-dark font-bold">&bull;</span> WCAG Accessibility &amp; Digital Tool Evaluation</li>
           </ul>
         </div>
 
         <!-- Pillar 3 -->
-        <div class="p-7 rounded-2xl bg-slate-50 border border-slate-200/80">
-          <div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-5">
+        <div class="p-7 rounded-2xl bg-epl-light-soft border border-epl-border">
+          <div class="w-11 h-11 rounded-xl bg-shamrock-100 text-shamrock-800 flex items-center justify-center mb-5">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           </div>
-          <h3 class="font-display font-bold text-lg text-slate-900 mb-3">Change &amp; Program Leadership</h3>
-          <ul class="space-y-2.5 text-sm text-slate-600">
-            <li class="flex items-start gap-2"><span class="text-emerald-600 font-bold">&bull;</span> Prosci ADKAR Organizational Change Management</li>
-            <li class="flex items-start gap-2"><span class="text-emerald-600 font-bold">&bull;</span> Cross-Functional Program &amp; Project Management</li>
-            <li class="flex items-start gap-2"><span class="text-emerald-600 font-bold">&bull;</span> Change Investment ROI &amp; Adoption Tracking</li>
-            <li class="flex items-start gap-2"><span class="text-emerald-600 font-bold">&bull;</span> New and Existing Employee SOP Roadmapping</li>
+          <h3 class="font-display font-bold text-lg text-epl-dark mb-3">Change &amp; Program Leadership</h3>
+          <ul class="space-y-2.5 text-sm text-epl-dark/80">
+            <li class="flex items-start gap-2"><span class="text-shamrock-700 font-bold">&bull;</span> Prosci ADKAR Organizational Change Management</li>
+            <li class="flex items-start gap-2"><span class="text-shamrock-700 font-bold">&bull;</span> Cross-Functional Program &amp; Project Management</li>
+            <li class="flex items-start gap-2"><span class="text-shamrock-700 font-bold">&bull;</span> Change Investment ROI &amp; Adoption Tracking</li>
+            <li class="flex items-start gap-2"><span class="text-shamrock-700 font-bold">&bull;</span> New and Existing Employee SOP Roadmapping</li>
           </ul>
         </div>
       </div>
@@ -431,71 +500,71 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid lg:grid-cols-12 gap-12 items-start">
         <div class="lg:col-span-7">
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-600 block mb-2">Background</span>
-          <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 tracking-tight mb-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-persimmon-700 block mb-2">Background</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-epl-dark tracking-tight mb-6">
             From the classroom to enterprise learning architecture.
           </h2>
-          <div class="space-y-4 text-slate-600 text-base leading-relaxed">
+          <div class="space-y-4 text-epl-dark/80 text-base leading-relaxed">
             <p>
-              My approach to instructional design is shaped by seeing learning from every angle: as a high school mathematics teacher, a Director of Technology leading campus-wide digital transformation, a freelance instructional designer for adult learners, and now as part of the first ever IT change management team at my two-time alma mater, the <strong class="font-semibold text-slate-900">University of Central Florida</strong>.
+              My approach to instructional design is shaped by seeing learning from every angle: as a high school mathematics teacher, a Director of Technology leading campus-wide digital transformation, a freelance instructional designer for adult learners, and now as part of the first ever IT change management team at my two-time alma mater, the <strong class="font-semibold text-epl-dark">University of Central Florida</strong>.
             </p>
             <p>
-              Over a 15-year career in education and technology, I’ve learned that the best curriculum or software rollout only succeeds when it respects the end user’s time and cognitive load. Whether I’m building a SCORM-compliant interactive simulation, redesigning a hybrid course, or guiding stakeholders through a system transition with <strong class="font-semibold text-slate-900">Prosci ADKAR</strong>, my focus is clarity, usability, and measurable impact.
+              Over a 15-year career in education and technology, I’ve learned that the best curriculum or software rollout only succeeds when it respects the end user’s time and cognitive load. Whether I’m building a SCORM-compliant interactive simulation, redesigning a hybrid course, or guiding stakeholders through a system transition with <strong class="font-semibold text-epl-dark">Prosci ADKAR</strong>, my focus is clarity, usability, and measurable impact.
             </p>
           </div>
         </div>
 
         <!-- Career Timeline Card -->
-        <div class="lg:col-span-5 bg-white rounded-2xl border border-slate-200/90 p-7 shadow-sm">
-          <h3 class="font-display font-bold text-base text-slate-900 uppercase tracking-wider mb-6">Career Milestones</h3>
-          <div class="space-y-6 border-l-2 border-slate-200 pl-5 ml-1.5">
+        <div class="lg:col-span-5 bg-white rounded-2xl border border-epl-border p-7 shadow-sm">
+          <h3 class="font-display font-bold text-base text-epl-dark uppercase tracking-wider mb-6">Career Milestones</h3>
+          <div class="space-y-6 border-l-2 border-epl-border pl-5 ml-1.5">
             <div class="relative">
-              <span class="w-3 h-3 rounded-full bg-amber-500 ring-4 ring-white absolute -left-[27px] top-1"></span>
-              <div class="text-xs font-semibold text-amber-700">2026 &ndash; Present</div>
-              <div class="font-bold text-slate-900 text-sm">IT Change Management Team</div>
-              <div class="text-xs text-slate-500">University of Central Florida</div>
+              <span class="w-3 h-3 rounded-full bg-persimmon-500 ring-4 ring-white absolute -left-[27px] top-1"></span>
+              <div class="text-xs font-semibold text-persimmon-700">2026 &ndash; Present</div>
+              <div class="font-bold text-epl-dark text-sm">IT Change Management Team</div>
+              <div class="text-xs text-epl-dark/65">University of Central Florida</div>
             </div>
             <div class="relative">
-              <span class="w-3 h-3 rounded-full bg-amber-500 ring-4 ring-white absolute -left-[27px] top-1"></span>
-              <div class="text-xs font-semibold text-amber-700">2021 &ndash; Present</div>
-              <div class="font-bold text-slate-900 text-sm">Founder &amp; Principal Instructional Designer</div>
-              <div class="text-xs text-slate-500">EPL Educational Services</div>
+              <span class="w-3 h-3 rounded-full bg-persimmon-500 ring-4 ring-white absolute -left-[27px] top-1"></span>
+              <div class="text-xs font-semibold text-persimmon-700">2021 &ndash; Present</div>
+              <div class="font-bold text-epl-dark text-sm">Founder &amp; Principal Instructional Designer</div>
+              <div class="text-xs text-epl-dark/65">EPL Educational Services</div>
             </div>
             <div class="relative">
-              <span class="w-3 h-3 rounded-full bg-slate-400 ring-4 ring-white absolute -left-[27px] top-1"></span>
-              <div class="text-xs font-semibold text-slate-500">2025 &ndash; Present</div>
-              <div class="font-bold text-slate-900 text-sm">Senior Instructional Designer (Contract)</div>
-              <div class="text-xs text-slate-500">Calvary International Language School</div>
+              <span class="w-3 h-3 rounded-full bg-epl-dark/45 ring-4 ring-white absolute -left-[27px] top-1"></span>
+              <div class="text-xs font-semibold text-epl-dark/65">2025 &ndash; Present</div>
+              <div class="font-bold text-epl-dark text-sm">Senior Instructional Designer (Contract)</div>
+              <div class="text-xs text-epl-dark/65">Calvary International Language School</div>
             </div>
             <div class="relative">
-              <span class="w-3 h-3 rounded-full bg-slate-400 ring-4 ring-white absolute -left-[27px] top-1"></span>
-              <div class="text-xs font-semibold text-slate-500">2022 &ndash; 2026</div>
-              <div class="font-bold text-slate-900 text-sm">Director of Technology</div>
-              <div class="text-xs text-slate-500">The First Academy (Orlando, FL)</div>
+              <span class="w-3 h-3 rounded-full bg-epl-dark/45 ring-4 ring-white absolute -left-[27px] top-1"></span>
+              <div class="text-xs font-semibold text-epl-dark/65">2022 &ndash; 2026</div>
+              <div class="font-bold text-epl-dark text-sm">Director of Technology</div>
+              <div class="text-xs text-epl-dark/65">The First Academy (Orlando, FL)</div>
             </div>
             <div class="relative">
-              <span class="w-3 h-3 rounded-full bg-slate-400 ring-4 ring-white absolute -left-[27px] top-1"></span>
-              <div class="text-xs font-semibold text-slate-500">2021</div>
-              <div class="font-bold text-slate-900 text-sm">Achieved: Master of Arts (Instructional Design &amp; Technology)</div>
-              <div class="text-xs text-slate-500">University of Central Florida</div>
+              <span class="w-3 h-3 rounded-full bg-epl-dark/45 ring-4 ring-white absolute -left-[27px] top-1"></span>
+              <div class="text-xs font-semibold text-epl-dark/65">2021</div>
+              <div class="font-bold text-epl-dark text-sm">Achieved: Master of Arts (Instructional Design &amp; Technology)</div>
+              <div class="text-xs text-epl-dark/65">University of Central Florida</div>
             </div>
             <div class="relative">
-              <span class="w-3 h-3 rounded-full bg-slate-400 ring-4 ring-white absolute -left-[27px] top-1"></span>
-              <div class="text-xs font-semibold text-slate-500">2018 &ndash; 2022</div>
-              <div class="font-bold text-slate-900 text-sm">Upper School Math Teacher</div>
-              <div class="text-xs text-slate-500">The First Academy (Orlando, FL)</div>
+              <span class="w-3 h-3 rounded-full bg-epl-dark/45 ring-4 ring-white absolute -left-[27px] top-1"></span>
+              <div class="text-xs font-semibold text-epl-dark/65">2018 &ndash; 2022</div>
+              <div class="font-bold text-epl-dark text-sm">Upper School Math Teacher</div>
+              <div class="text-xs text-epl-dark/65">The First Academy (Orlando, FL)</div>
             </div>
             <div class="relative">
-              <span class="w-3 h-3 rounded-full bg-slate-400 ring-4 ring-white absolute -left-[27px] top-1"></span>
-              <div class="text-xs font-semibold text-slate-500">2015 &ndash; 2018</div>
-              <div class="font-bold text-slate-900 text-sm">Upper School Math Teacher &amp; Technology Chair</div>
-              <div class="text-xs text-slate-500">Atlantic Christian Academy (West Palm Beach, FL)</div>
+              <span class="w-3 h-3 rounded-full bg-epl-dark/45 ring-4 ring-white absolute -left-[27px] top-1"></span>
+              <div class="text-xs font-semibold text-epl-dark/65">2015 &ndash; 2018</div>
+              <div class="font-bold text-epl-dark text-sm">Upper School Math Teacher &amp; Technology Chair</div>
+              <div class="text-xs text-epl-dark/65">Atlantic Christian Academy (West Palm Beach, FL)</div>
             </div>
             <div class="relative">
-              <span class="w-3 h-3 rounded-full bg-slate-300 ring-4 ring-white absolute -left-[27px] top-1"></span>
-              <div class="text-xs font-semibold text-slate-500">2013 &ndash; 2015</div>
-              <div class="font-bold text-slate-900 text-sm">Co-Director &amp; Assistant Director of Training</div>
-              <div class="text-xs text-slate-500">Mathnasium (Multiple Locations)</div>
+              <span class="w-3 h-3 rounded-full bg-epl-dark/25 ring-4 ring-white absolute -left-[27px] top-1"></span>
+              <div class="text-xs font-semibold text-epl-dark/65">2013 &ndash; 2015</div>
+              <div class="font-bold text-epl-dark text-sm">Co-Director &amp; Assistant Director of Training</div>
+              <div class="text-xs text-epl-dark/65">Mathnasium (Multiple Locations)</div>
             </div>
           </div>
         </div>
@@ -504,39 +573,39 @@
   </section>
 
   <!-- Contact / Footer CTA -->
-  <footer id="contact" class="bg-slate-900 text-white py-20">
+  <footer id="contact" class="bg-epl-dark text-white py-20">
     <div class="max-w-6xl mx-auto px-6">
       <div class="max-w-2xl">
-        <span class="text-xs font-bold uppercase tracking-widest text-amber-400 block mb-3">Let’s Connect</span>
+        <span class="text-xs font-bold uppercase tracking-widest text-persimmon-300 block mb-3">Let’s Connect</span>
         <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-tight mb-4">
           Looking for an Instructional Designer or Learning Tech Leader?
         </h2>
-        <p class="text-slate-300 text-base leading-relaxed mb-8">
+        <p class="text-epl-light/85 text-base leading-relaxed mb-8">
           I’m always glad to discuss instructional design roles, L&amp;D leadership opportunities, enterprise LMS initiatives, or consulting projects in Orlando and remotely.
         </p>
 
         <div class="flex flex-wrap items-center gap-4">
           <a href="mailto:will@williamzavala.com"
-             class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm transition-colors">
+             class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-persimmon-300 hover:bg-persimmon-200 text-epl-dark font-bold text-sm transition-colors">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             will@williamzavala.com
           </a>
 
           <button onclick="copyEmail()" id="copy-email-btn"
-                  class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-sm transition-colors">
+                  class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-epl-dark-deep hover:bg-epl-dark-deep/80 text-epl-light border border-white/15 font-semibold text-sm transition-colors">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
             <span id="copy-label">Copy Email</span>
           </button>
 
           <a href="https://www.linkedin.com/in/williamzavala/" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-sm transition-colors">
+             class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-epl-dark-deep hover:bg-epl-dark-deep/80 text-epl-light border border-white/15 font-semibold text-sm transition-colors">
             LinkedIn Profile
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10"/></svg>
           </a>
         </div>
       </div>
 
-      <div class="mt-16 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div class="mt-16 pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-epl-light/70">
         <div>&copy; <span id="year"></span> Will Zavala. Orlando, Florida.</div>
         <div>Instructional Design &bull; Learning Technology &bull; Change Management</div>
       </div>
@@ -544,39 +613,39 @@
   </footer>
 
   <!-- Case Study Modal -->
-  <div id="case-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-slate-950/70 backdrop-blur-sm">
-    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[88vh] overflow-y-auto shadow-2xl border border-slate-200 p-6 sm:p-8 relative">
+  <div id="case-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-epl-dark-deep/75 backdrop-blur-sm">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[88vh] overflow-y-auto shadow-2xl border border-epl-border p-6 sm:p-8 relative">
       <button onclick="closeModal()" aria-label="Close modal"
-              class="absolute top-5 right-5 w-9 h-9 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors">
+              class="absolute top-5 right-5 w-9 h-9 rounded-lg bg-epl-light hover:bg-epl-border/60 text-epl-dark flex items-center justify-center transition-colors">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
 
-      <div id="modal-tag" class="text-xs font-bold uppercase tracking-wider text-amber-600 mb-2"></div>
-      <h3 id="modal-title" class="font-display font-bold text-2xl sm:text-3xl text-slate-900 mb-2"></h3>
-      <div id="modal-org" class="text-sm font-medium text-slate-500 mb-6 pb-5 border-b border-slate-200"></div>
+      <div id="modal-tag" class="text-xs font-bold uppercase tracking-wider text-persimmon-700 mb-2"></div>
+      <h3 id="modal-title" class="font-display font-bold text-2xl sm:text-3xl text-epl-dark mb-2"></h3>
+      <div id="modal-org" class="text-sm font-medium text-epl-dark/65 mb-6 pb-5 border-b border-epl-border"></div>
 
-      <div class="space-y-5 text-sm text-slate-600 leading-relaxed">
+      <div class="space-y-5 text-sm text-epl-dark/80 leading-relaxed">
         <div>
-          <h4 class="font-bold text-slate-900 uppercase text-xs tracking-wider mb-1.5">The Challenge</h4>
+          <h4 class="font-bold text-epl-dark uppercase text-xs tracking-wider mb-1.5">The Challenge</h4>
           <p id="modal-challenge"></p>
         </div>
         <div>
-          <h4 class="font-bold text-slate-900 uppercase text-xs tracking-wider mb-1.5">Approach &amp; Solution</h4>
+          <h4 class="font-bold text-epl-dark uppercase text-xs tracking-wider mb-1.5">Approach &amp; Solution</h4>
           <p id="modal-solution"></p>
         </div>
         <div>
-          <h4 class="font-bold text-slate-900 uppercase text-xs tracking-wider mb-1.5">Key Outcomes &amp; Deliverables</h4>
-          <ul id="modal-outcomes" class="space-y-1.5 list-disc pl-5 text-slate-700"></ul>
+          <h4 class="font-bold text-epl-dark uppercase text-xs tracking-wider mb-1.5">Key Outcomes &amp; Deliverables</h4>
+          <ul id="modal-outcomes" class="space-y-1.5 list-disc pl-5 text-epl-dark/85"></ul>
         </div>
       </div>
 
-      <div class="mt-8 pt-5 border-t border-slate-200 flex flex-wrap items-center justify-end gap-3">
+      <div class="mt-8 pt-5 border-t border-epl-border flex flex-wrap items-center justify-end gap-3">
         <a id="modal-demo-btn" href="#" target="_blank" rel="noopener noreferrer"
-           class="hidden items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-sm font-bold transition-colors">
+           class="hidden items-center gap-2 px-5 py-2.5 rounded-xl bg-persimmon-300 hover:bg-persimmon-200 text-epl-dark text-sm font-bold transition-colors">
           Launch Demo
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10"/></svg>
         </a>
-        <button onclick="closeModal()" class="px-5 py-2.5 rounded-xl bg-slate-900 text-white text-sm font-semibold hover:bg-slate-800 transition-colors">
+        <button onclick="closeModal()" class="px-5 py-2.5 rounded-xl bg-epl-dark text-white text-sm font-semibold hover:bg-epl-dark-deep transition-colors">
           Close Project Details
         </button>
       </div>
@@ -593,11 +662,11 @@
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         filterBtns.forEach(b => {
-          b.classList.remove('bg-slate-900', 'text-white');
-          b.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+          b.classList.remove('bg-epl-dark', 'text-white');
+          b.classList.add('bg-white', 'text-epl-dark/80', 'border', 'border-epl-border');
         });
-        btn.classList.add('bg-slate-900', 'text-white');
-        btn.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+        btn.classList.add('bg-epl-dark', 'text-white');
+        btn.classList.remove('bg-white', 'text-epl-dark/80', 'border', 'border-epl-border');
 
         const filter = btn.dataset.filter;
         projectCards.forEach(card => {
@@ -774,6 +843,170 @@
 
       document.querySelectorAll('.mobile-nav-link').forEach(link => {
         link.addEventListener('click', () => setMobileMenu(false));
+      });
+    }
+
+    // Interactive Credibility Drawer
+    const credibilityDetails = {
+      focus: {
+        eyebrow: 'Current Focus',
+        title: 'Enterprise IT Change Management',
+        subtitle: 'University of Central Florida • 2026 – Present',
+        accent: 'border-l-persimmon-500',
+        summary: 'Helping lead the University of Central Florida through a series of campus-wide technology initiatives focused on communication, readiness, and end-user adoption:',
+        items: [
+          'Transitioning university teleconferencing from Zoom to Microsoft Teams.',
+          'Training end users across campus on the new myUCF portal layout.',
+          'Onboarding and training distributed IT groups on new cybersecurity software including Qualys and CrowdStrike.',
+          'Applying Prosci ADKAR change management frameworks to drive awareness, knowledge, and sustained adoption.'
+        ]
+      },
+      experience: {
+        eyebrow: 'Experience',
+        title: '15+ Years in Education & Learning Technology',
+        subtitle: 'Instructional Design, L&D & Enterprise IT Leadership',
+        accent: 'border-l-epl-dark',
+        summary: 'Combining classroom pedagogy, K–12 IT executive leadership, contract course architecture, and higher-education change management:',
+        items: [
+          'IT Change Management Team at UCF and Founder & Principal Instructional Designer at EPL Educational Services.',
+          'Director of Technology at The First Academy—managing a $600K budget, 2,000+ Apple devices, cloud migrations, and campus L&D for 1,400 students and 125 staff.',
+          '8+ years leading various teams including Full Technology Departments, a Team of Instructors, and the QA of entire businesses.',
+          '7+ years teaching upper school mathematics, chairing instructional technology, and directing training operations at Mathnasium.'
+        ]
+      },
+      methodology: {
+        eyebrow: 'Methodology',
+        title: 'Prosci ADKAR & ADDIE',
+        subtitle: 'Human-Centered Learning & Rollout Frameworks',
+        accent: 'border-l-shamrock-600',
+        summary: 'Bridging structured instructional design with organizational change leadership so learners adopt new systems with minimal friction:',
+        items: [
+          'Prosci ADKAR methodology guiding Awareness, Desire, Knowledge, Ability, and Reinforcement across enterprise rollouts.',
+          'ADDIE & SAM design cycles for compliance training, branching simulations, and hybrid curriculum architecture.',
+          'Adult learning theory (andragogy) and mobile-first microlearning tailored to reduce cognitive load.',
+          'SCORM 2004 4th Edition LMS integration, WCAG accessibility alignment, and change investment ROI tracking.'
+        ]
+      },
+      location: {
+        eyebrow: 'Location',
+        title: 'Orlando, Florida',
+        subtitle: 'Open to Local & Remote Roles',
+        accent: 'border-l-persimmon-500',
+        summary: 'Based in Central Florida with proven experience delivering both on-site campus transformations and fully remote L&D engagements:',
+        items: [
+          'Located in Orlando, FL and a two-time University of Central Florida alumnus (M.A. in Instructional Design & Technology).',
+          'Available for on-site or hybrid opportunities across the Greater Orlando and Central Florida region.',
+          'Equipped for remote instructional design, enterprise LMS consulting, and change management leadership.',
+          'Connect directly via email (will@williamzavala.com) or LinkedIn.'
+        ]
+      }
+    };
+
+    const credWrapper = document.getElementById('credibility-interactive');
+    const credTabs = document.querySelectorAll('.cred-tab');
+    const credDrawer = document.getElementById('credibility-drawer');
+    const credDrawerCard = document.getElementById('credibility-drawer-card');
+    const credCloseBtn = document.getElementById('cred-drawer-close');
+    let activeCredKey = null;
+    let credPinned = false;
+
+    function openCredDrawer(key, pin = false) {
+      const info = credibilityDetails[key];
+      if (!info || !credDrawer) return;
+
+      activeCredKey = key;
+      if (pin) credPinned = true;
+
+      document.getElementById('cred-drawer-eyebrow').textContent = info.eyebrow;
+      document.getElementById('cred-drawer-title').textContent = info.title;
+      document.getElementById('cred-drawer-subtitle').textContent = info.subtitle;
+      document.getElementById('cred-drawer-summary').textContent = info.summary;
+
+      credDrawerCard.classList.remove('border-l-persimmon-500', 'border-l-epl-dark', 'border-l-shamrock-600');
+      credDrawerCard.classList.add(info.accent);
+
+      const itemsList = document.getElementById('cred-drawer-items');
+      itemsList.innerHTML = '';
+      info.items.forEach(text => {
+        const li = document.createElement('li');
+        li.className = 'bg-epl-light-soft/80 border border-epl-border/70 rounded-xl p-3.5 flex items-start gap-2.5 leading-snug';
+        li.innerHTML = '<span class="w-2 h-2 rounded-full bg-persimmon-500 mt-1.5 shrink-0"></span><span></span>';
+        li.querySelector('span:last-child').textContent = text;
+        itemsList.appendChild(li);
+      });
+
+      credTabs.forEach(tab => {
+        const isActive = tab.dataset.cred === key;
+        tab.setAttribute('aria-expanded', String(isActive));
+        tab.classList.toggle('bg-white', isActive);
+        tab.classList.toggle('border-persimmon-300', isActive);
+        tab.classList.toggle('shadow-sm', isActive);
+        tab.classList.toggle('border-transparent', !isActive);
+        const chevron = tab.querySelector('.cred-chevron');
+        if (chevron) chevron.classList.toggle('rotate-180', isActive);
+      });
+
+      credDrawer.classList.remove('grid-rows-[0fr]', 'opacity-0', 'mt-0');
+      credDrawer.classList.add('grid-rows-[1fr]', 'opacity-100', 'mt-5');
+      credDrawer.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeCredDrawer() {
+      if (!credDrawer) return;
+      activeCredKey = null;
+      credPinned = false;
+
+      credTabs.forEach(tab => {
+        tab.setAttribute('aria-expanded', 'false');
+        tab.classList.remove('bg-white', 'border-persimmon-300', 'shadow-sm');
+        tab.classList.add('border-transparent');
+        const chevron = tab.querySelector('.cred-chevron');
+        if (chevron) chevron.classList.remove('rotate-180');
+      });
+
+      credDrawer.classList.remove('grid-rows-[1fr]', 'opacity-100', 'mt-5');
+      credDrawer.classList.add('grid-rows-[0fr]', 'opacity-0', 'mt-0');
+      credDrawer.setAttribute('aria-hidden', 'true');
+    }
+
+    if (credWrapper && credDrawer) {
+      credTabs.forEach(tab => {
+        tab.addEventListener('pointerenter', (e) => {
+          if (e.pointerType === 'mouse') {
+            openCredDrawer(tab.dataset.cred, false);
+          }
+        });
+
+        tab.addEventListener('click', (e) => {
+          const key = tab.dataset.cred;
+          if (activeCredKey === key && (credPinned || e.detail === 0)) {
+            closeCredDrawer();
+          } else {
+            openCredDrawer(key, true);
+          }
+        });
+      });
+
+      credWrapper.addEventListener('mouseleave', () => {
+        if (!credPinned) {
+          closeCredDrawer();
+        }
+      });
+
+      if (credCloseBtn) {
+        credCloseBtn.addEventListener('click', () => closeCredDrawer());
+      }
+
+      document.addEventListener('click', (e) => {
+        if (activeCredKey && !credWrapper.contains(e.target)) {
+          closeCredDrawer();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && activeCredKey) {
+          closeCredDrawer();
+        }
       });
     }
   </script>
